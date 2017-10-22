@@ -7,10 +7,24 @@
     chrome.tabs.onActiveChanged.addListener(function(tabId,selectInfo) {
       chrome.tabs.get(tabId, function (tab) {
           var url = tab.url;
-          $('#resultslist').append("<li><span>"+url+"</span></li>");
+          var timeSpent = 0;
+          var ongoingTimer = 0;
+          var dict = {"url":url, "timer": timeSpent}
+          $('#resultslist').append("<li><span>"+dict.url+"</span></li>");
           // $scope.websiteList.push(url);
-          console.log(url);
+          // console.log(url);
           console.log(tab.title);
+
+          console.log(dict);
+
+          //Create timer
+          //If url already exists in dict
+
+            //Then, timeSpent val += ongoingTimer
+
+          //Else,
+            // start ongoingTimer and save to timeSpent
+
       });
     });
   // }
