@@ -5,6 +5,9 @@
 //
 //   function addWebsite(tabId) {
 var timers = {};
+    chrome.tabs.onUpdated.addListener(function() {
+      console.log("testingonUpdate");
+    })
     chrome.tabs.onActiveChanged.addListener(function(tabId,selectInfo) {
       console.clear();
       Object.keys(timers).forEach(k => {
@@ -12,6 +15,7 @@ var timers = {};
 
       });
       chrome.tabs.get(tabId, function (tab) {
+          $('#resultslist').html('');
           var url = new URI(tab.url);
           var timeSpent = 0;
           url = url.domain().replace(".","_");
@@ -22,19 +26,25 @@ var timers = {};
               totalTime:0
             };
           console.log(`Other domains: ${Object.keys(timers).filter(k => k != url).length}`);
-          $('#resultslist').append("<li><span>"+url+"</span></li>");
-          $('#resultslist').append("<li><span>"+totalTime+"</span></li>");
-          Object.keys(timers)
-            //.filter(k => k != url)
-            .forEach(k=>{
-              //enumerate "other" domains and cumulate time
-              if (timers[k].taskStart) {
-                let s = (new Date() - timers[k].taskStart) / 1000;
-                timers[k].totalTime += s;
-              }
-              //start or kill timer
-              timers[k].taskStart = (k == url ? new Date() : null);
-            });
+          // $('#resultslist').append("<li><span>"+totalTime+"</span></li>");
+          let allTimers = Object.keys(timers).map(k => {let result = timers[k]; result.key = k; return result;});
+          let otherTimers = allTimers.filter(t => t.key != url);
+          let thisTimer = allTimers.find(t => t.key == url);
+          let runningTimers = allTimers.filter(t => t.taskStart)
+
+          allTimers.forEach(t => {
+            $('#resultslist').append(`<li>${t.key}: ${t.totalTime}</li>`);
+          });
+
+          runningTimers.forEach(t => {
+            let s = (new Date() - t.taskStart) / 1000
+            t.totalTime += Math.round(s);
+          });
+
+          otherTimers.forEach(t => t.taskStart = null);
+
+          thisTimer.taskStart = new Date();
+
 
           // $scope.websiteList.push(url);
           // console.log(url);
