@@ -16,11 +16,14 @@ var timers = {};
           var timeSpent = 0;
           url = url.domain().replace(".","_");
 
-          if (!timers[url]) timers[url] = {
-            taskStart:new Date(),
-            totalTime:0
-          };
+          if (!timers[url])
+            timers[url] = {
+              taskStart:new Date(),
+              totalTime:0
+            };
           console.log(`Other domains: ${Object.keys(timers).filter(k => k != url).length}`);
+          $('#resultslist').append("<li><span>"+url+"</span></li>");
+          $('#resultslist').append("<li><span>"+totalTime+"</span></li>");
           Object.keys(timers)
             //.filter(k => k != url)
             .forEach(k=>{
