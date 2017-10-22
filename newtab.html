@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    -->
+    <!-- <script type="text/javascript" src="angular.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script> -->
+    <script type="text/javascript" src="background.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
     <title>Auto Time Tracking Datas</title>
+
+    <script src="background.js"></script>
+
+
   </head>
   <body>
     Hello World!
     This will contain your timesheet, bookmarks links, and ads for charity!
     Impact tabs with a cause!
+    <ul id="resultslist">
+      <!-- <p ng-repeat="website in $scope.websiteList"> {{$website}} </p> -->
+
+    </ul>
+
+<!--
+    <script>
+      var myDiv = document.querySelector('.resultslist').innerText = 'foo';
+    </script> -->
   </body>
 </html>
+<!--
+//google that error, look up chrome extension how to display background.js element/var in newtab
+//maybe use a new var -->
