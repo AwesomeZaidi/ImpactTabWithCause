@@ -34,7 +34,7 @@ var timers = {};
             });
 
 
-          $('#resultslist').append("<li><span>"+timers[url]+"</span></li>");
+          $('#resultslist').append("<div><span>"+timers[url]+"</span></div>");
           // $scope.websiteList.push(url);
           // console.log(url);
 

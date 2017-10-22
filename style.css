@@ -1,3 +1,24 @@
-h2 {
-  color: orange;
+.website-data {
+  background-color: purple;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  margin: 10px;
+}
+
+body {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p {
+  font-size: 24px;
+  font-family: Quicksand, sans-serf;
+}
+
+h1 {
+  font-family: "Cinzel Decorative", serif;
 }
