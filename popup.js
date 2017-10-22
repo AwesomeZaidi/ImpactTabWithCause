@@ -1,3 +1,4 @@
+
 $(function init() {
   chrome.browserAction.onClicked.addListener(function(tab) {
     var title = tab.title;

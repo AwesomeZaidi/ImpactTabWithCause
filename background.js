@@ -1,13 +1,23 @@
-chrome.tabs.create({url: 'http://google.com'}, callback)
+//This file should watch for a new tab to open
+chrome.tabs.onActiveChanged.addListener(function(tabId,selectInfo) {
+  chrome.tabs.get(tabId, function (tab) {
+      var url = tab.url;
+      console.log(url);
+  });
 
-function callback(data) {
-  console.log(data);
-  console.log("boo boo baa URL DATA");
-  console.log(data.url);
+  //If timer is already running, end count.
 
-}
-chrome.tabs.onUpdated.query({currentWindow: true, active: true}, function(tabs){
-    console.log(tabs[0].url);
-    var title = tab.title;
-    console.log(title);
+  //Start new timer
+    //If URL already exists in Storage
+
+      //Add timer value to existing value
+
+    //Else
+
+      //Create new val in Storage
 });
+
+// function callback(data) {
+//   console.log(data);
+//   console.log(data.url);
+// }
