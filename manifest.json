@@ -16,7 +16,11 @@
     "default_popup": "popup.html"
   },
   "background": {
-  "scripts": ["jquery-3.2.1.min.js", "background.js"]
+    "scripts": [
+      "URI.min.js",
+      "jquery-3.2.1.min.js",
+      "background.js"
+    ]
   },
   "chrome_url_overrides": {
     "newtab": "newtab.html"
