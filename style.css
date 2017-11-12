@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #resultslist {
   background-color: beige;
   border: 5px solid tan;
@@ -9,6 +10,31 @@
   padding: 18px 8px 18px 8px;
   min-width: 75%;
   cursor: pointer;
+=======
+.website-data {
+  background-color: purple;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  margin: 10px;
+}
+
+body {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p {
+  font-size: 24px;
+  font-family: Quicksand, sans-serf;
+}
+
+h1 {
+  font-family: "Cinzel Decorative", serif;
+>>>>>>> b40ed69c90b5388cb48d18bb44374836ec1fd8cd
 }
 #resultslist:hover {
   -webkit-transition-duration: 0.7s; /* Safari */
