@@ -69,7 +69,7 @@ chrome.tabs.onActiveChanged.addListener(function(tabId,selectInfo) {
           omniCounter+=1;
           console.log("https://www.omnipointment.com");
           if (omniCounter<=1) {
-            document.getElementById("suggestSiteOne").innerHTML= "<h2>https://www.omnipointment.com</h2>"
+            document.getElementById("suggestSiteOne").innerHTML= "Does Doodle take tooo long? <h2>https://www.omnipointment.com</h2>"
           }
           else {
             break;
