@@ -5,6 +5,7 @@
   "description": "A hello world extension",
   "permissions": ["tabs"],
   "content_security_policy": "script-src 'self' 'sha256-sYCMm0ReJ5JZ/g4umodKeUuBhR4JpppwpThscD3kdmY='; object-src 'self'",
+  
   "icons": {
     "128": "icon128.png",
     "48": "icon48.png",

@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- In production use:
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    -->
-    <!-- <script type="text/javascript" src="angular.min.js"></script>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular/angular-route.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/directives.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans+Condensed:300|Oswald|Pacifico|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="URI.min.js"></script>
     <title>Auto Time Tracking Datas</title>
@@ -21,13 +14,22 @@
 
   </head>
   <body>
-    <h1>Impact Tabs</h1>
-<p>This will contain your timesheet, bookmarks links, and ads for charity!
-Impact tabs with a cause!</p>
-    <div id="resultslist">
-      <!-- <p ng-repeat="website in $scope.websiteList"> {{$website}} </p> -->
+      <div id="bg">
+          <img src="bg.jpg" alt="">
+        </div>
+      <h1 class="title">Impact Tabs</h1>
+      <p class="slogan">Impact Tabs is a beauty that saves your time and their money's.</p>
+      <div class="container">
+          <!-- Your Sites -->
+          <p class="timedb">Time Dashboard</p>
+        <div id="resultslist"></div>
+      </div>
+      <div class="suggest-group">
+          <h2>Suggested Sites Based on Recent Visits:</h2>
+          <div id="suggestSiteOne"></div>
+      </div>
 
-    </div>
+      <!-- <p ng-repeat="website in $scope.websiteList"> {{$website}} </p> -->
 
 <!--
     <script>
