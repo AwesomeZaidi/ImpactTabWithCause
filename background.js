@@ -98,12 +98,12 @@ chrome.tabs.onActiveChanged.addListener(function(tabId,selectInfo) {
     }
       
 
-  // var limit = timers.youtube_com.totalTime+timers.twitter_com.totalTime
-  // console.log("limit="+limit);
-  // if (limit > 40) {
-  //   console.log("Passed Limit Mfer");
-  // }
+  var limit = timers.youtube_com.totalTime+timers.twitter_com.totalTime
+  console.log("limit="+limit);
+  if (limit > 40) {
+    console.log("Passed Limit Mfer");
+  }
 
-  // console.log("list="+list);
+  console.log("list="+list);
 
 });

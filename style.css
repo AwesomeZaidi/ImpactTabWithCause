@@ -1,4 +1,31 @@
-<<<<<<< HEAD
+#bg {
+  z-index: -10;
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  /* opacity: .5; */
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+.centered {
+  position: fixed;
+  top: 10%;
+  left: 53%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 #resultslist {
   background-color: beige;
   border: 5px solid tan;
@@ -10,7 +37,7 @@
   padding: 18px 8px 18px 8px;
   min-width: 75%;
   cursor: pointer;
-=======
+}
 .website-data {
   background-color: purple;
   width: 150px;
@@ -34,7 +61,6 @@ p {
 
 h1 {
   font-family: "Cinzel Decorative", serif;
->>>>>>> b40ed69c90b5388cb48d18bb44374836ec1fd8cd
 }
 #resultslist:hover {
   -webkit-transition-duration: 0.7s; /* Safari */
@@ -64,14 +90,6 @@ p {
   font-family: Quicksand, sans-serf;
 }
 
-.title {
-  margin: 35px;
-  font-family: "Unica One", serif;
-  font-size: 64px;
-  background-color: tan;
-  border: beige 3px solid;
-  border-radius: 8px;
-}
 .slogan {
   max-width: 62%;
   margin-bottom: 30px;
@@ -92,26 +110,4 @@ p {
   cursor: pointer;
   background-color: tan;
   border: 5px solid beige;
-}
-
-
-#bg {
-  z-index: -10;
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  opacity: .6;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
 }
